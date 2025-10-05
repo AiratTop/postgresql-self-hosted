@@ -1,0 +1,25 @@
+services:
+  psql:
+    container_name: psql
+    hostname: psql
+    image: postgres:17
+    networks: ['shared_network']
+    ports:
+      - '5433:5432'
+    restart: always
+    environment:
+      - POSTGRES_USER=${PSQL_USER}
+      - POSTGRES_PASSWORD=${PSQL_PWD}
+      - POSTGRES_DB=${PSQL_DB}
+    volumes:
+      - ./data/psql:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -h localhost -U ${PSQL_USER} -d ${PSQL_DB}']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+networks:
+  shared_network:
+    name: shared_network
+    driver: bridge
+    external: true
