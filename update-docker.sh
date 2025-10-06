@@ -2,6 +2,10 @@
 
 date
 
+# backup container version
+date >> docker-image-versions.txt
+docker images >> docker-image-versions.txt
+
 # Pull latest version
 docker compose pull
 
