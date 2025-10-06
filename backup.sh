@@ -11,4 +11,4 @@ BACKUP_DIR="backups"
 mkdir -p "${BACKUP_DIR}"
 
 # Dump the PostgreSQL database and compress it.
-docker compose exec -T n8n-psql pg_dump -U "${PSQL_USER}" -d "${PSQL_DB}" | gzip > "${BACKUP_DIR}/psql_db_$(date +%F_%H-%M-%S).sql.gz"
+docker compose exec -T psql pg_dump -U "${PSQL_USER}" -d "${PSQL_DB}" | gzip > "${BACKUP_DIR}/psql_db_$(date +%F_%H-%M-%S).sql.gz"
