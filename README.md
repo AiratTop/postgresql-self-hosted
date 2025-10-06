@@ -56,6 +56,7 @@ Check out other self-hosted solutions:
 -   [redis-self-hosted](https://github.com/AiratTop/redis-self-hosted)
 -   [n8n-self-hosted](https://github.com/AiratTop/n8n-self-hosted)
 -   [caddy-self-hosted](https://github.com/AiratTop/caddy-self-hosted)
+-   [wordpress-self-hosted](https://github.com/AiratTop/wordpress-self-hosted)
 
 ## License
 
