@@ -9,8 +9,8 @@ It's configured to connect to a shared Docker network, making it easy to integra
 - Uses the official PostgreSQL Docker image.
 - Data is persisted in a local volume.
 - Pre-configured for a shared network for easy inter-service communication.
-- Includes scripts for easy restart, and updates.
-- Includes a backup script.
+- Includes scripts for easy management (`restart-docker.sh`, `update-docker.sh`).
+- Includes a `backup.sh` script for easy database backups.
 
 ## Getting Started
 
@@ -39,7 +39,7 @@ It's configured to connect to a shared Docker network, making it easy to integra
 -   **Start:** `docker compose up -d`
 -   **Restart:** `./restart-docker.sh`
 -   **Update:** `./update-docker.sh` (Pulls the latest Docker image and restarts the container)
--   **Backup:** `./backup.sh` (Creates a database backup)
+-   **Backup:** `./backup.sh` (Creates a compressed backup in the `backups` directory)
 
 ## Connecting with n8n
 
