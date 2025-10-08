@@ -1,5 +1,7 @@
 # PostgreSQL Self-Hosted with Docker
 
+![postgresql-self-hosted](https://repository-images.githubusercontent.com/1070266134/cf88736c-7e39-4330-887d-b08793d8708a)
+
 This repository provides a simple `docker compose` setup to run a self-hosted [PostgreSQL](https://www.postgresql.org/) instance.
 
 It's configured to connect to a shared Docker network, making it easy to integrate with other services like [n8n](https://github.com/AiratTop/n8n-self-hosted).
