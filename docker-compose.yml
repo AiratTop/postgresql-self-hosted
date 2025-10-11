@@ -8,9 +8,9 @@ services:
       - '5433:5432'
     restart: always
     environment:
+      POSTGRES_DB: ${PSQL_DB}
       POSTGRES_USER: ${PSQL_USER}
       POSTGRES_PASSWORD: ${PSQL_PWD}
-      POSTGRES_DB: ${PSQL_DB}
     volumes:
       - ./data/psql:/var/lib/postgresql/data
     healthcheck:
