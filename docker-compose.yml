@@ -1,3 +1,4 @@
+name: psql
 services:
   psql:
     container_name: psql
