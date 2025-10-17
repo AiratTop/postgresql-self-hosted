@@ -19,6 +19,14 @@ services:
       interval: 5s
       timeout: 5s
       retries: 10
+    command:
+      - postgres
+      - -c
+      - log_min_messages=warning
+      - -c
+      - client_min_messages=warning
+      - -c
+      - log_checkpoints=off
 networks:
   shared_network:
     name: shared_network
