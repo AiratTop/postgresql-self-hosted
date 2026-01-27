@@ -30,6 +30,7 @@ It's configured to connect to a shared Docker network, making it easy to integra
 
 3.  **Configure environment variables:**
     Update a `.env` file and specify your database credentials.
+    You can use my Open Source [password generator](https://pass.airat.top) to create a strong password.
 
 4.  **Start the service:**
     ```bash
